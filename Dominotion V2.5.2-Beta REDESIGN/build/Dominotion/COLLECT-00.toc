@@ -1,0 +1,2015 @@
+([('Dominotion.exe',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\build\\Dominotion\\Dominotion.exe',
+   'EXECUTABLE'),
+  ('Fonts\\GlacialIndifference-Bold.ttf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\Fonts\\GlacialIndifference-Bold.ttf',
+   'DATA'),
+  ('Fonts\\GlacialIndifference-Regular.ttf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\Fonts\\GlacialIndifference-Regular.ttf',
+   'DATA'),
+  ('Fonts\\OFL.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\Fonts\\OFL.txt',
+   'DATA'),
+  ('Icons\\Dominotion_App_Icons\\Dominotio_android-chrome-192x192.png',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\Icons\\Dominotion_App_Icons\\Dominotio_android-chrome-192x192.png',
+   'DATA'),
+  ('Icons\\Dominotion_App_Icons\\Dominotion-16x16.png',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\Icons\\Dominotion_App_Icons\\Dominotion-16x16.png',
+   'DATA'),
+  ('Icons\\Dominotion_App_Icons\\Dominotion-32x32.png',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\Icons\\Dominotion_App_Icons\\Dominotion-32x32.png',
+   'DATA'),
+  ('Icons\\Dominotion_App_Icons\\Dominotion-apple-touch-icon.png',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\Icons\\Dominotion_App_Icons\\Dominotion-apple-touch-icon.png',
+   'DATA'),
+  ('Icons\\Dominotion_App_Icons\\Dominotion.ico',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\Icons\\Dominotion_App_Icons\\Dominotion.ico',
+   'DATA'),
+  ('Icons\\Dominotion_App_Icons\\Dominotion_android-chrome-512x512.png',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\Icons\\Dominotion_App_Icons\\Dominotion_android-chrome-512x512.png',
+   'DATA'),
+  ('Icons\\Mesas_Icons\\Check_Marcador_Finalizada.png',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\Icons\\Mesas_Icons\\Check_Marcador_Finalizada.png',
+   'DATA'),
+  ('Icons\\Mesas_Icons\\Miss_Marcador_Pendiente.png',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\Icons\\Mesas_Icons\\Miss_Marcador_Pendiente.png',
+   'DATA'),
+  ('PIL\\AvifImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\AvifImagePlugin.py',
+   'DATA'),
+  ('PIL\\BdfFontFile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\BdfFontFile.py',
+   'DATA'),
+  ('PIL\\BlpImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\BlpImagePlugin.py',
+   'DATA'),
+  ('PIL\\BmpImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\BmpImagePlugin.py',
+   'DATA'),
+  ('PIL\\BufrStubImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\BufrStubImagePlugin.py',
+   'DATA'),
+  ('PIL\\ContainerIO.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ContainerIO.py',
+   'DATA'),
+  ('PIL\\CurImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\CurImagePlugin.py',
+   'DATA'),
+  ('PIL\\DcxImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\DcxImagePlugin.py',
+   'DATA'),
+  ('PIL\\DdsImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\DdsImagePlugin.py',
+   'DATA'),
+  ('PIL\\EpsImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\EpsImagePlugin.py',
+   'DATA'),
+  ('PIL\\ExifTags.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ExifTags.py',
+   'DATA'),
+  ('PIL\\FitsImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\FitsImagePlugin.py',
+   'DATA'),
+  ('PIL\\FliImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\FliImagePlugin.py',
+   'DATA'),
+  ('PIL\\FontFile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\FontFile.py',
+   'DATA'),
+  ('PIL\\FpxImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\FpxImagePlugin.py',
+   'DATA'),
+  ('PIL\\FtexImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\FtexImagePlugin.py',
+   'DATA'),
+  ('PIL\\GbrImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\GbrImagePlugin.py',
+   'DATA'),
+  ('PIL\\GdImageFile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\GdImageFile.py',
+   'DATA'),
+  ('PIL\\GifImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\GifImagePlugin.py',
+   'DATA'),
+  ('PIL\\GimpGradientFile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\GimpGradientFile.py',
+   'DATA'),
+  ('PIL\\GimpPaletteFile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\GimpPaletteFile.py',
+   'DATA'),
+  ('PIL\\GribStubImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\GribStubImagePlugin.py',
+   'DATA'),
+  ('PIL\\Hdf5StubImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\Hdf5StubImagePlugin.py',
+   'DATA'),
+  ('PIL\\IcnsImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\IcnsImagePlugin.py',
+   'DATA'),
+  ('PIL\\IcoImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\IcoImagePlugin.py',
+   'DATA'),
+  ('PIL\\ImImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImImagePlugin.py',
+   'DATA'),
+  ('PIL\\Image.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\Image.py',
+   'DATA'),
+  ('PIL\\ImageChops.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageChops.py',
+   'DATA'),
+  ('PIL\\ImageCms.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageCms.py',
+   'DATA'),
+  ('PIL\\ImageColor.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageColor.py',
+   'DATA'),
+  ('PIL\\ImageDraw.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageDraw.py',
+   'DATA'),
+  ('PIL\\ImageDraw2.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageDraw2.py',
+   'DATA'),
+  ('PIL\\ImageEnhance.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageEnhance.py',
+   'DATA'),
+  ('PIL\\ImageFile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageFile.py',
+   'DATA'),
+  ('PIL\\ImageFilter.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageFilter.py',
+   'DATA'),
+  ('PIL\\ImageFont.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageFont.py',
+   'DATA'),
+  ('PIL\\ImageGrab.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageGrab.py',
+   'DATA'),
+  ('PIL\\ImageMath.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageMath.py',
+   'DATA'),
+  ('PIL\\ImageMode.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageMode.py',
+   'DATA'),
+  ('PIL\\ImageMorph.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageMorph.py',
+   'DATA'),
+  ('PIL\\ImageOps.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageOps.py',
+   'DATA'),
+  ('PIL\\ImagePalette.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImagePalette.py',
+   'DATA'),
+  ('PIL\\ImagePath.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImagePath.py',
+   'DATA'),
+  ('PIL\\ImageQt.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageQt.py',
+   'DATA'),
+  ('PIL\\ImageSequence.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageSequence.py',
+   'DATA'),
+  ('PIL\\ImageShow.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageShow.py',
+   'DATA'),
+  ('PIL\\ImageStat.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageStat.py',
+   'DATA'),
+  ('PIL\\ImageText.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageText.py',
+   'DATA'),
+  ('PIL\\ImageTk.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageTk.py',
+   'DATA'),
+  ('PIL\\ImageTransform.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageTransform.py',
+   'DATA'),
+  ('PIL\\ImageWin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImageWin.py',
+   'DATA'),
+  ('PIL\\ImtImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\ImtImagePlugin.py',
+   'DATA'),
+  ('PIL\\IptcImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\IptcImagePlugin.py',
+   'DATA'),
+  ('PIL\\Jpeg2KImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\Jpeg2KImagePlugin.py',
+   'DATA'),
+  ('PIL\\JpegImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\JpegImagePlugin.py',
+   'DATA'),
+  ('PIL\\JpegPresets.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\JpegPresets.py',
+   'DATA'),
+  ('PIL\\McIdasImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\McIdasImagePlugin.py',
+   'DATA'),
+  ('PIL\\MicImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\MicImagePlugin.py',
+   'DATA'),
+  ('PIL\\MpegImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\MpegImagePlugin.py',
+   'DATA'),
+  ('PIL\\MpoImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\MpoImagePlugin.py',
+   'DATA'),
+  ('PIL\\MspImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\MspImagePlugin.py',
+   'DATA'),
+  ('PIL\\PSDraw.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PSDraw.py',
+   'DATA'),
+  ('PIL\\PaletteFile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PaletteFile.py',
+   'DATA'),
+  ('PIL\\PalmImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PalmImagePlugin.py',
+   'DATA'),
+  ('PIL\\PcdImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PcdImagePlugin.py',
+   'DATA'),
+  ('PIL\\PcfFontFile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PcfFontFile.py',
+   'DATA'),
+  ('PIL\\PcxImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PcxImagePlugin.py',
+   'DATA'),
+  ('PIL\\PdfImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PdfImagePlugin.py',
+   'DATA'),
+  ('PIL\\PdfParser.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PdfParser.py',
+   'DATA'),
+  ('PIL\\PixarImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PixarImagePlugin.py',
+   'DATA'),
+  ('PIL\\PngImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PngImagePlugin.py',
+   'DATA'),
+  ('PIL\\PpmImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PpmImagePlugin.py',
+   'DATA'),
+  ('PIL\\PsdImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\PsdImagePlugin.py',
+   'DATA'),
+  ('PIL\\QoiImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\QoiImagePlugin.py',
+   'DATA'),
+  ('PIL\\SgiImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\SgiImagePlugin.py',
+   'DATA'),
+  ('PIL\\SpiderImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\SpiderImagePlugin.py',
+   'DATA'),
+  ('PIL\\SunImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\SunImagePlugin.py',
+   'DATA'),
+  ('PIL\\TarIO.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\TarIO.py',
+   'DATA'),
+  ('PIL\\TgaImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\TgaImagePlugin.py',
+   'DATA'),
+  ('PIL\\TiffImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\TiffImagePlugin.py',
+   'DATA'),
+  ('PIL\\TiffTags.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\TiffTags.py',
+   'DATA'),
+  ('PIL\\WalImageFile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\WalImageFile.py',
+   'DATA'),
+  ('PIL\\WebPImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\WebPImagePlugin.py',
+   'DATA'),
+  ('PIL\\WmfImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\WmfImagePlugin.py',
+   'DATA'),
+  ('PIL\\XVThumbImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\XVThumbImagePlugin.py',
+   'DATA'),
+  ('PIL\\XbmImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\XbmImagePlugin.py',
+   'DATA'),
+  ('PIL\\XpmImagePlugin.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\XpmImagePlugin.py',
+   'DATA'),
+  ('PIL\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\__init__.py',
+   'DATA'),
+  ('PIL\\__main__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\__main__.py',
+   'DATA'),
+  ('PIL\\_avif.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_avif.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_avif.pyi',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_avif.pyi',
+   'DATA'),
+  ('PIL\\_binary.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_binary.py',
+   'DATA'),
+  ('PIL\\_deprecate.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_deprecate.py',
+   'DATA'),
+  ('PIL\\_imaging.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imaging.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imaging.pyi',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imaging.pyi',
+   'DATA'),
+  ('PIL\\_imagingcms.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingcms.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingcms.pyi',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingcms.pyi',
+   'DATA'),
+  ('PIL\\_imagingft.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingft.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingft.pyi',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingft.pyi',
+   'DATA'),
+  ('PIL\\_imagingmath.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingmath.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingmath.pyi',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingmath.pyi',
+   'DATA'),
+  ('PIL\\_imagingmorph.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingmorph.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingmorph.pyi',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingmorph.pyi',
+   'DATA'),
+  ('PIL\\_imagingtk.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingtk.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingtk.pyi',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_imagingtk.pyi',
+   'DATA'),
+  ('PIL\\_tkinter_finder.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_tkinter_finder.py',
+   'DATA'),
+  ('PIL\\_typing.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_typing.py',
+   'DATA'),
+  ('PIL\\_util.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_util.py',
+   'DATA'),
+  ('PIL\\_version.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_version.py',
+   'DATA'),
+  ('PIL\\_webp.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_webp.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_webp.pyi',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\_webp.pyi',
+   'DATA'),
+  ('PIL\\features.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\features.py',
+   'DATA'),
+  ('PIL\\py.typed',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\py.typed',
+   'DATA'),
+  ('PIL\\report.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\.venv-build\\Lib\\site-packages\\PIL\\report.py',
+   'DATA'),
+  ('VCRUNTIME140.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\VCRUNTIME140_1.dll',
+   'BINARY'),
+  ('_asyncio.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_asyncio.pyd',
+   'EXTENSION'),
+  ('_bz2.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_bz2.pyd',
+   'EXTENSION'),
+  ('_ctypes.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_ctypes.pyd',
+   'EXTENSION'),
+  ('_decimal.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_decimal.pyd',
+   'EXTENSION'),
+  ('_elementtree.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_elementtree.pyd',
+   'EXTENSION'),
+  ('_hashlib.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_hashlib.pyd',
+   'EXTENSION'),
+  ('_lzma.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_lzma.pyd',
+   'EXTENSION'),
+  ('_multiprocessing.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('_overlapped.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_overlapped.pyd',
+   'EXTENSION'),
+  ('_queue.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_queue.pyd',
+   'EXTENSION'),
+  ('_socket.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_socket.pyd',
+   'EXTENSION'),
+  ('_sqlite3.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_sqlite3.pyd',
+   'EXTENSION'),
+  ('_ssl.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_ssl.pyd',
+   'EXTENSION'),
+  ('_tkinter.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_tkinter.pyd',
+   'EXTENSION'),
+  ('_wmi.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_wmi.pyd',
+   'EXTENSION'),
+  ('_zstd.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\_zstd.pyd',
+   'EXTENSION'),
+  ('base_library.zip',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\build\\Dominotion\\base_library.zip',
+   'DATA'),
+  ('charset_normalizer\\cd.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\charset_normalizer\\cd.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('charset_normalizer\\md.cp314-win_amd64.pyd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\charset_normalizer\\md.cp314-win_amd64.pyd',
+   'EXTENSION'),
+  ('customtkinter-6.0.0.dist-info\\INSTALLER',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter-6.0.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('customtkinter-6.0.0.dist-info\\METADATA',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter-6.0.0.dist-info\\METADATA',
+   'DATA'),
+  ('customtkinter-6.0.0.dist-info\\RECORD',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter-6.0.0.dist-info\\RECORD',
+   'DATA'),
+  ('customtkinter-6.0.0.dist-info\\REQUESTED',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter-6.0.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('customtkinter-6.0.0.dist-info\\WHEEL',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter-6.0.0.dist-info\\WHEEL',
+   'DATA'),
+  ('customtkinter-6.0.0.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter-6.0.0.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('customtkinter-6.0.0.dist-info\\top_level.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter-6.0.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('customtkinter\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\__init__.py',
+   'DATA'),
+  ('customtkinter\\assets\\.DS_Store',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\.DS_Store',
+   'DATA'),
+  ('customtkinter\\assets\\fonts\\CustomTkinter_shapes_font.otf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\fonts\\CustomTkinter_shapes_font.otf',
+   'DATA'),
+  ('customtkinter\\assets\\fonts\\Roboto\\Roboto-Medium.ttf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\fonts\\Roboto\\Roboto-Medium.ttf',
+   'DATA'),
+  ('customtkinter\\assets\\fonts\\Roboto\\Roboto-Regular.ttf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\fonts\\Roboto\\Roboto-Regular.ttf',
+   'DATA'),
+  ('customtkinter\\assets\\icons\\.DS_Store',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\icons\\.DS_Store',
+   'DATA'),
+  ('customtkinter\\assets\\icons\\CustomTkinter_icon_Windows.ico',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\icons\\CustomTkinter_icon_Windows.ico',
+   'DATA'),
+  ('customtkinter\\assets\\themes\\blue.json',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\themes\\blue.json',
+   'DATA'),
+  ('customtkinter\\assets\\themes\\dark-blue.json',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\themes\\dark-blue.json',
+   'DATA'),
+  ('customtkinter\\assets\\themes\\gold.json',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\themes\\gold.json',
+   'DATA'),
+  ('customtkinter\\assets\\themes\\green.json',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\assets\\themes\\green.json',
+   'DATA'),
+  ('customtkinter\\windows\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\ctk_input_dialog.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\ctk_input_dialog.py',
+   'DATA'),
+  ('customtkinter\\windows\\ctk_tk.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\ctk_tk.py',
+   'DATA'),
+  ('customtkinter\\windows\\ctk_toplevel.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\ctk_toplevel.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\appearance_mode\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\appearance_mode\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\appearance_mode\\appearance_mode_base_class.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\appearance_mode\\appearance_mode_base_class.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\appearance_mode\\appearance_mode_tracker.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\appearance_mode\\appearance_mode_tracker.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\core_rendering\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\core_rendering\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\core_rendering\\ctk_canvas.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\core_rendering\\ctk_canvas.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\core_rendering\\draw_engine.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\core_rendering\\draw_engine.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\core_widget_classes\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\core_widget_classes\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\core_widget_classes\\ctk_base_class.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\core_widget_classes\\ctk_base_class.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\core_widget_classes\\dropdown_menu.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\core_widget_classes\\dropdown_menu.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_button.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_button.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_checkbox.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_checkbox.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_combobox.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_combobox.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_entry.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_entry.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_frame.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_frame.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_label.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_label.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_optionmenu.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_optionmenu.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_progressbar.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_progressbar.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_radiobutton.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_radiobutton.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_scrollable_frame.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_scrollable_frame.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_scrollbar.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_scrollbar.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_segmented_button.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_segmented_button.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_slider.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_slider.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_switch.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_switch.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_tabview.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_tabview.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\ctk_textbox.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\ctk_textbox.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\font\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\font\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\font\\ctk_font.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\font\\ctk_font.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\font\\font_manager.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\font\\font_manager.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\image\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\image\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\image\\ctk_image.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\image\\ctk_image.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\scaling\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\scaling\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\scaling\\scaling_base_class.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\scaling\\scaling_base_class.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\scaling\\scaling_tracker.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\scaling\\scaling_tracker.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\theme\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\theme\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\theme\\theme_manager.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\theme\\theme_manager.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\utility\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\utility\\__init__.py',
+   'DATA'),
+  ('customtkinter\\windows\\widgets\\utility\\utility_functions.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\customtkinter\\windows\\widgets\\utility\\utility_functions.py',
+   'DATA'),
+  ('libcrypto-3.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\libcrypto-3.dll',
+   'BINARY'),
+  ('libffi-8.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\libffi-8.dll',
+   'BINARY'),
+  ('libssl-3.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\libssl-3.dll',
+   'BINARY'),
+  ('libtommath.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\libtommath.dll',
+   'BINARY'),
+  ('pillow-12.3.0.dist-info\\INSTALLER',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\pillow-12.3.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('pillow-12.3.0.dist-info\\METADATA',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\pillow-12.3.0.dist-info\\METADATA',
+   'DATA'),
+  ('pillow-12.3.0.dist-info\\RECORD',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\pillow-12.3.0.dist-info\\RECORD',
+   'DATA'),
+  ('pillow-12.3.0.dist-info\\REQUESTED',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\pillow-12.3.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('pillow-12.3.0.dist-info\\WHEEL',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\pillow-12.3.0.dist-info\\WHEEL',
+   'DATA'),
+  ('pillow-12.3.0.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\pillow-12.3.0.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('pillow-12.3.0.dist-info\\sboms\\pillow-12.3.0.cdx.json',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\pillow-12.3.0.dist-info\\sboms\\pillow-12.3.0.cdx.json',
+   'DATA'),
+  ('pillow-12.3.0.dist-info\\top_level.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\pillow-12.3.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('pillow-12.3.0.dist-info\\zip-safe',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\pillow-12.3.0.dist-info\\zip-safe',
+   'DATA'),
+  ('pyexpat.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\pyexpat.pyd',
+   'EXTENSION'),
+  ('python314.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\python314.dll',
+   'BINARY'),
+  ('reportlab-4.4.10.dist-info\\INSTALLER',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab-4.4.10.dist-info\\INSTALLER',
+   'DATA'),
+  ('reportlab-4.4.10.dist-info\\METADATA',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab-4.4.10.dist-info\\METADATA',
+   'DATA'),
+  ('reportlab-4.4.10.dist-info\\RECORD',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab-4.4.10.dist-info\\RECORD',
+   'DATA'),
+  ('reportlab-4.4.10.dist-info\\REQUESTED',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab-4.4.10.dist-info\\REQUESTED',
+   'DATA'),
+  ('reportlab-4.4.10.dist-info\\WHEEL',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab-4.4.10.dist-info\\WHEEL',
+   'DATA'),
+  ('reportlab-4.4.10.dist-info\\licenses\\LICENSE',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab-4.4.10.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('reportlab-4.4.10.dist-info\\top_level.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab-4.4.10.dist-info\\top_level.txt',
+   'DATA'),
+  ('reportlab\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\__init__.py',
+   'DATA'),
+  ('reportlab\\fonts\\00readme.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\00readme.txt',
+   'DATA'),
+  ('reportlab\\fonts\\DarkGarden-changelog.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\DarkGarden-changelog.txt',
+   'DATA'),
+  ('reportlab\\fonts\\DarkGarden-copying-gpl.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\DarkGarden-copying-gpl.txt',
+   'DATA'),
+  ('reportlab\\fonts\\DarkGarden-copying.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\DarkGarden-copying.txt',
+   'DATA'),
+  ('reportlab\\fonts\\DarkGarden-readme.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\DarkGarden-readme.txt',
+   'DATA'),
+  ('reportlab\\fonts\\DarkGarden.sfd',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\DarkGarden.sfd',
+   'DATA'),
+  ('reportlab\\fonts\\DarkGardenMK.afm',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\DarkGardenMK.afm',
+   'DATA'),
+  ('reportlab\\fonts\\DarkGardenMK.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\DarkGardenMK.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\Vera.ttf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\Vera.ttf',
+   'DATA'),
+  ('reportlab\\fonts\\VeraBI.ttf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\VeraBI.ttf',
+   'DATA'),
+  ('reportlab\\fonts\\VeraBd.ttf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\VeraBd.ttf',
+   'DATA'),
+  ('reportlab\\fonts\\VeraIt.ttf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\VeraIt.ttf',
+   'DATA'),
+  ('reportlab\\fonts\\_a______.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\_a______.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\_ab_____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\_ab_____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\_abi____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\_abi____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\_ai_____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\_ai_____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\_eb_____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\_eb_____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\_ebi____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\_ebi____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\_ei_____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\_ei_____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\_er_____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\_er_____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\bitstream-vera-license.txt',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\bitstream-vera-license.txt',
+   'DATA'),
+  ('reportlab\\fonts\\callig15.afm',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\callig15.afm',
+   'DATA'),
+  ('reportlab\\fonts\\callig15.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\callig15.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\cob_____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\cob_____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\cobo____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\cobo____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\com_____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\com_____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\coo_____.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\coo_____.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\hb-test.ttf',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\hb-test.ttf',
+   'DATA'),
+  ('reportlab\\fonts\\sy______.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\sy______.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\zd______.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\zd______.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\zx______.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\zx______.pfb',
+   'DATA'),
+  ('reportlab\\fonts\\zy______.pfb',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\fonts\\zy______.pfb',
+   'DATA'),
+  ('reportlab\\graphics\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\__init__.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\__init__.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\code128.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\code128.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\code39.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\code39.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\code93.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\code93.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\common.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\common.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\dmtx.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\dmtx.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\eanbc.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\eanbc.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\ecc200datamatrix.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\ecc200datamatrix.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\fourstate.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\fourstate.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\lto.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\lto.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\qr.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\qr.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\qrencoder.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\qrencoder.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\test.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\test.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\usps.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\usps.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\usps4s.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\usps4s.py',
+   'DATA'),
+  ('reportlab\\graphics\\barcode\\widgets.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\barcode\\widgets.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\__init__.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\areas.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\areas.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\axes.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\axes.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\barcharts.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\barcharts.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\dotbox.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\dotbox.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\doughnut.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\doughnut.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\legends.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\legends.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\linecharts.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\linecharts.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\lineplots.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\lineplots.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\markers.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\markers.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\piecharts.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\piecharts.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\slidebox.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\slidebox.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\spider.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\spider.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\textlabels.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\textlabels.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\utils.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\utils.py',
+   'DATA'),
+  ('reportlab\\graphics\\charts\\utils3d.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\charts\\utils3d.py',
+   'DATA'),
+  ('reportlab\\graphics\\renderPDF.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\renderPDF.py',
+   'DATA'),
+  ('reportlab\\graphics\\renderPM.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\renderPM.py',
+   'DATA'),
+  ('reportlab\\graphics\\renderPS.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\renderPS.py',
+   'DATA'),
+  ('reportlab\\graphics\\renderSVG.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\renderSVG.py',
+   'DATA'),
+  ('reportlab\\graphics\\renderbase.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\renderbase.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\__init__.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\bubble.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\bubble.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\clustered_bar.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\clustered_bar.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\clustered_column.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\clustered_column.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\excelcolors.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\excelcolors.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\exploded_pie.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\exploded_pie.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\filled_radar.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\filled_radar.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\line_chart.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\line_chart.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\linechart_with_markers.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\linechart_with_markers.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\radar.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\radar.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\runall.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\runall.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\scatter.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\scatter.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\scatter_lines.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\scatter_lines.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\scatter_lines_markers.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\scatter_lines_markers.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\simple_pie.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\simple_pie.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\stacked_bar.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\stacked_bar.py',
+   'DATA'),
+  ('reportlab\\graphics\\samples\\stacked_column.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\samples\\stacked_column.py',
+   'DATA'),
+  ('reportlab\\graphics\\shapes.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\shapes.py',
+   'DATA'),
+  ('reportlab\\graphics\\svgpath.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\svgpath.py',
+   'DATA'),
+  ('reportlab\\graphics\\testdrawings.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\testdrawings.py',
+   'DATA'),
+  ('reportlab\\graphics\\testshapes.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\testshapes.py',
+   'DATA'),
+  ('reportlab\\graphics\\transform.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\transform.py',
+   'DATA'),
+  ('reportlab\\graphics\\utils.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\utils.py',
+   'DATA'),
+  ('reportlab\\graphics\\widgetbase.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\widgetbase.py',
+   'DATA'),
+  ('reportlab\\graphics\\widgets\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\widgets\\__init__.py',
+   'DATA'),
+  ('reportlab\\graphics\\widgets\\adjustableArrow.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\widgets\\adjustableArrow.py',
+   'DATA'),
+  ('reportlab\\graphics\\widgets\\eventcal.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\widgets\\eventcal.py',
+   'DATA'),
+  ('reportlab\\graphics\\widgets\\flags.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\widgets\\flags.py',
+   'DATA'),
+  ('reportlab\\graphics\\widgets\\grids.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\widgets\\grids.py',
+   'DATA'),
+  ('reportlab\\graphics\\widgets\\markers.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\widgets\\markers.py',
+   'DATA'),
+  ('reportlab\\graphics\\widgets\\signsandsymbols.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\widgets\\signsandsymbols.py',
+   'DATA'),
+  ('reportlab\\graphics\\widgets\\table.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\graphics\\widgets\\table.py',
+   'DATA'),
+  ('reportlab\\lib\\PyFontify.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\PyFontify.py',
+   'DATA'),
+  ('reportlab\\lib\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\__init__.py',
+   'DATA'),
+  ('reportlab\\lib\\abag.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\abag.py',
+   'DATA'),
+  ('reportlab\\lib\\arciv.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\arciv.py',
+   'DATA'),
+  ('reportlab\\lib\\attrmap.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\attrmap.py',
+   'DATA'),
+  ('reportlab\\lib\\boxstuff.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\boxstuff.py',
+   'DATA'),
+  ('reportlab\\lib\\codecharts.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\codecharts.py',
+   'DATA'),
+  ('reportlab\\lib\\colors.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\colors.py',
+   'DATA'),
+  ('reportlab\\lib\\corp.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\corp.py',
+   'DATA'),
+  ('reportlab\\lib\\enums.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\enums.py',
+   'DATA'),
+  ('reportlab\\lib\\extformat.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\extformat.py',
+   'DATA'),
+  ('reportlab\\lib\\fontfinder.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\fontfinder.py',
+   'DATA'),
+  ('reportlab\\lib\\fonts.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\fonts.py',
+   'DATA'),
+  ('reportlab\\lib\\formatters.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\formatters.py',
+   'DATA'),
+  ('reportlab\\lib\\geomutils.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\geomutils.py',
+   'DATA'),
+  ('reportlab\\lib\\logger.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\logger.py',
+   'DATA'),
+  ('reportlab\\lib\\normalDate.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\normalDate.py',
+   'DATA'),
+  ('reportlab\\lib\\pagesizes.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\pagesizes.py',
+   'DATA'),
+  ('reportlab\\lib\\pdfencrypt.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\pdfencrypt.py',
+   'DATA'),
+  ('reportlab\\lib\\pygments2xpre.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\pygments2xpre.py',
+   'DATA'),
+  ('reportlab\\lib\\randomtext.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\randomtext.py',
+   'DATA'),
+  ('reportlab\\lib\\rl_accel.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\rl_accel.py',
+   'DATA'),
+  ('reportlab\\lib\\rl_safe_eval.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\rl_safe_eval.py',
+   'DATA'),
+  ('reportlab\\lib\\rltempfile.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\rltempfile.py',
+   'DATA'),
+  ('reportlab\\lib\\rparsexml.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\rparsexml.py',
+   'DATA'),
+  ('reportlab\\lib\\sequencer.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\sequencer.py',
+   'DATA'),
+  ('reportlab\\lib\\styles.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\styles.py',
+   'DATA'),
+  ('reportlab\\lib\\testutils.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\testutils.py',
+   'DATA'),
+  ('reportlab\\lib\\textsplit.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\textsplit.py',
+   'DATA'),
+  ('reportlab\\lib\\units.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\units.py',
+   'DATA'),
+  ('reportlab\\lib\\utils.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\utils.py',
+   'DATA'),
+  ('reportlab\\lib\\validators.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\validators.py',
+   'DATA'),
+  ('reportlab\\lib\\yaml.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\lib\\yaml.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\__init__.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_can_cmap_data.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_can_cmap_data.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_cidfontdata.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_cidfontdata.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_enc_macexpert.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_enc_macexpert.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_enc_macroman.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_enc_macroman.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_enc_pdfdoc.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_enc_pdfdoc.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_enc_standard.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_enc_standard.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_enc_symbol.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_enc_symbol.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_enc_winansi.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_enc_winansi.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_enc_zapfdingbats.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_enc_zapfdingbats.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_courier.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_courier.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_courierbold.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_courierbold.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_courierboldoblique.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_courierboldoblique.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_courieroblique.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_courieroblique.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_helvetica.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_helvetica.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_helveticabold.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_helveticabold.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_helveticaboldoblique.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_helveticaboldoblique.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_helveticaoblique.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_helveticaoblique.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_symbol.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_symbol.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_timesbold.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_timesbold.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_timesbolditalic.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_timesbolditalic.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_timesitalic.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_timesitalic.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_timesroman.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_timesroman.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_fontdata_widths_zapfdingbats.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_fontdata_widths_zapfdingbats.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\_glyphlist.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\_glyphlist.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\acroform.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\acroform.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\cidfonts.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\cidfonts.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\pdfdoc.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\pdfdoc.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\pdfform.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\pdfform.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\pdfmetrics.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\pdfmetrics.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\pdfpattern.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\pdfpattern.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\pdfutils.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\pdfutils.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\rl_codecs.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\rl_codecs.py',
+   'DATA'),
+  ('reportlab\\pdfbase\\ttfonts.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfbase\\ttfonts.py',
+   'DATA'),
+  ('reportlab\\pdfgen\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfgen\\__init__.py',
+   'DATA'),
+  ('reportlab\\pdfgen\\canvas.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfgen\\canvas.py',
+   'DATA'),
+  ('reportlab\\pdfgen\\pathobject.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfgen\\pathobject.py',
+   'DATA'),
+  ('reportlab\\pdfgen\\pdfgeom.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfgen\\pdfgeom.py',
+   'DATA'),
+  ('reportlab\\pdfgen\\pdfimages.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfgen\\pdfimages.py',
+   'DATA'),
+  ('reportlab\\pdfgen\\textobject.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\pdfgen\\textobject.py',
+   'DATA'),
+  ('reportlab\\platypus\\__init__.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\__init__.py',
+   'DATA'),
+  ('reportlab\\platypus\\doctemplate.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\doctemplate.py',
+   'DATA'),
+  ('reportlab\\platypus\\figures.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\figures.py',
+   'DATA'),
+  ('reportlab\\platypus\\flowables.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\flowables.py',
+   'DATA'),
+  ('reportlab\\platypus\\frames.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\frames.py',
+   'DATA'),
+  ('reportlab\\platypus\\multicol.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\multicol.py',
+   'DATA'),
+  ('reportlab\\platypus\\para.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\para.py',
+   'DATA'),
+  ('reportlab\\platypus\\paragraph.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\paragraph.py',
+   'DATA'),
+  ('reportlab\\platypus\\paraparser.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\paraparser.py',
+   'DATA'),
+  ('reportlab\\platypus\\tableofcontents.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\tableofcontents.py',
+   'DATA'),
+  ('reportlab\\platypus\\tables.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\tables.py',
+   'DATA'),
+  ('reportlab\\platypus\\xpreformatted.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\platypus\\xpreformatted.py',
+   'DATA'),
+  ('reportlab\\rl_config.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\rl_config.py',
+   'DATA'),
+  ('reportlab\\rl_settings.py',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\reportlab\\rl_settings.py',
+   'DATA'),
+  ('select.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\select.pyd',
+   'EXTENSION'),
+  ('sqlite3.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\sqlite3.dll',
+   'BINARY'),
+  ('tcl90.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\tcl90.dll',
+   'BINARY'),
+  ('tcl9tk90.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\tcl9tk90.dll',
+   'BINARY'),
+  ('unicodedata.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\unicodedata.pyd',
+   'EXTENSION'),
+  ('winsound.pyd',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\winsound.pyd',
+   'EXTENSION'),
+  ('zlib1.dll',
+   'C:\\Users\\nico-\\AppData\\Local\\Python\\pythoncore-3.14-64\\DLLs\\zlib1.dll',
+   'BINARY')],)

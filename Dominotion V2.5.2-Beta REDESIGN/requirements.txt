@@ -1,0 +1,10 @@
+# Dependencias de Dominotion. tkinter y sqlite3 son de la
+# biblioteca estándar de Python y no van acá: en Windows vienen incluidos
+# con el instalador oficial de python.org (no marcar "tcl/tk and IDLE"
+# como excluido al instalar Python en la máquina de build).
+
+customtkinter==6.0.0
+reportlab==4.4.10
+
+# --- Herramientas de empaquetado (no se necesitan en runtime) -----------
+# Instalar aparte con: pip install -r requirements-build.txt

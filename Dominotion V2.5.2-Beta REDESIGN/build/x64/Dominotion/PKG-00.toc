@@ -1,0 +1,77 @@
+('C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+ 'V2.5.2-Beta REDESIGN\\build\\x64\\Dominotion\\Dominotion.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\build\\x64\\Dominotion\\PYZ-00.pyz',
+   'PYZ'),
+  ('struct',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\build\\x64\\Dominotion\\localpycs\\struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\build\\x64\\Dominotion\\localpycs\\pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\build\\x64\\Dominotion\\localpycs\\pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\build\\x64\\Dominotion\\localpycs\\pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyimod04_pywin32',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\build\\x64\\Dominotion\\localpycs\\pyimod04_pywin32.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PyInstaller\\loader\\pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth__tkinter',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta '
+   'REDESIGN\\.venv-build\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks\\pyi_rth__tkinter.py',
+   'PYSOURCE'),
+  ('gui_py_Redesign_Mesas',
+   'C:\\Users\\nico-\\OneDrive\\Escritorio\\DOMINOTION\\files\\Dominotion '
+   'V2.5.2-Beta REDESIGN\\gui_py_Redesign_Mesas.py',
+   'PYSOURCE')],
+ 'python314.dll',
+ True,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)
