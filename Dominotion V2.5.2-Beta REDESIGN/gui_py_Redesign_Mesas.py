@@ -4413,7 +4413,10 @@ class VentanaPenalizaciones(VentanaModal):
             return
         if not messagebox.askyesno(
             "Confirmar tarjeta roja",
-            "El jugador será retirado inmediatamente y no podrá volver a ingresar. ¿Continuar?",
+            "El jugador será retirado del torneo y no podrá volver a ingresar.\n\n"
+            "Si su mesa actual ya tiene marcador, ese resultado se conserva y la "
+            "expulsión se aplicará en la siguiente mesa donde sea emparejado.\n\n"
+            "¿Continuar?",
             parent=self,
         ):
             return
@@ -8155,4 +8158,3 @@ if __name__ == "__main__":
     mostrar_ventana_presentacion()
     app = AplicacionDominotion()
     app.mainloop()
-# Primer Commit

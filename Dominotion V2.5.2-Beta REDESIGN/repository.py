@@ -101,8 +101,30 @@ def eliminar_jugador(cedula: str) -> None:
     conexion = obtener_conexion()
     try:
         with conexion:
-            # La clave foránea ON DELETE CASCADE elimina las relaciones del jugador.
+            # ON DELETE CASCADE borraría también sus descansos (BYE) y sanciones, lo
+            # que reescribiría el historial; por eso se protege a quien ya participó.
+            partidas = conexion.execute(
+                "SELECT COUNT(*) FROM mesas WHERE ? IN (j1_cedula, j2_cedula, j3_cedula, j4_cedula)",
+                (cedula,),
+            ).fetchone()[0]
+            descansos = conexion.execute(
+                "SELECT COUNT(*) FROM byes WHERE cedula = ?", (cedula,)
+            ).fetchone()[0]
+            sanciones = conexion.execute(
+                "SELECT COUNT(*) FROM penalizaciones WHERE cedula = ?", (cedula,)
+            ).fetchone()[0]
+            if partidas or descansos or sanciones:
+                raise ErrorDatos(
+                    f"No se puede eliminar a '{actual['nombre']}' porque tiene historial en "
+                    f"torneos ({partidas} mesa(s), {descansos} descanso(s), {sanciones} "
+                    "sanción(es)). Si no debe volver a participar, retírelo del torneo o "
+                    "agréguelo a la lista de vetados."
+                )
             conexion.execute("DELETE FROM jugadores WHERE cedula = ?", (cedula,))
+    except sqlite3.IntegrityError:
+        raise ErrorDatos(
+            f"No se puede eliminar a '{actual['nombre']}' porque otros registros dependen de él."
+        )
     finally:
         conexion.close()
 
@@ -271,11 +293,31 @@ def editar_jugador(
     conexion = obtener_conexion()
     try:
         with conexion:
-            # ON UPDATE CASCADE propaga el cambio de cédula a las tablas relacionadas.
+            # Algunas tablas (mesas, byes, penalizaciones) no tienen ON UPDATE CASCADE.
+            # Se difiere la verificación de claves foráneas hasta confirmar la
+            # transacción y se actualizan a mano junto con las copias archivadas.
+            conexion.execute("PRAGMA defer_foreign_keys = ON")
             conexion.execute(
                 "UPDATE jugadores SET cedula = ?, nombre = ?, sexo = ? WHERE cedula = ?",
                 (target_cedula, nuevo_nombre, nuevo_sexo, cedula_actual_str),
             )
+            if target_cedula != cedula_actual_str:
+                for columna in ("j1_cedula", "j2_cedula", "j3_cedula", "j4_cedula"):
+                    conexion.execute(
+                        f"UPDATE mesas SET {columna} = ? WHERE {columna} = ?",
+                        (target_cedula, cedula_actual_str),
+                    )
+                for tabla in (
+                    "byes",
+                    "penalizaciones",
+                    "torneo_ranking_archivado",
+                    "torneo_jugadores_archivados",
+                    "torneo_ranking_club_archivado",
+                ):
+                    conexion.execute(
+                        f"UPDATE {tabla} SET cedula = ? WHERE cedula = ?",
+                        (target_cedula, cedula_actual_str),
+                    )
 
             detalle_cambio = " | ".join(cambios)
             registrar_historial_jugador(
@@ -284,8 +326,13 @@ def editar_jugador(
                 f"Modificación: {detalle_cambio}",
                 conexion=conexion,
             )
-    except sqlite3.IntegrityError:
-        raise ErrorDatos(f"La cédula '{target_cedula}' ya pertenece a otro registro.")
+    except sqlite3.IntegrityError as error:
+        if obtener_jugador(target_cedula) is not None:
+            raise ErrorDatos(f"La cédula '{target_cedula}' ya pertenece a otro registro.")
+        raise ErrorDatos(
+            "No se pudo actualizar la cédula porque la base de datos rechazó el cambio "
+            f"por una restricción de integridad ({error})."
+        )
     finally:
         conexion.close()
 
@@ -649,7 +696,7 @@ def _asegurar_clasificaciones_archivadas(torneo_id: int) -> None:
 
 def _migrar_efectividad_clasificaciones_archivadas(torneo_id: int) -> None:
     """Actualiza una vez la EF del snapshot de un torneo archivado."""
-    migracion = f"efectividad_objetivo_menos_puntos_perdedor_v1:{torneo_id}"
+    migracion = f"efectividad_objetivo_menos_puntos_perdedor_v2:{torneo_id}"
     conexion = obtener_conexion()
     try:
         with conexion:
@@ -672,71 +719,75 @@ def _migrar_efectividad_clasificaciones_archivadas(torneo_id: int) -> None:
                     JOIN torneos t ON t.id = r.torneo_id
                     WHERE m.estado = 'finalizada' AND r.torneo_id = ?
                 ),
-                efectividades AS (
-                    SELECT torneo_id, j1_cedula AS cedula,
-                           CASE
-                               WHEN motivo_penalizacion LIKE 'Tarjeta roja%'
-                                    AND j1_cedula <> COALESCE(infractor, '')
-                                   THEN puntaje_meta
-                               WHEN motivo_penalizacion LIKE 'Tarjeta roja%'
-                                    AND j1_cedula = COALESCE(infractor, '')
-                                   THEN -puntaje_meta
-                               WHEN puntos_p1 > puntos_p2 THEN puntaje_meta - puntos_p2
-                               WHEN puntos_p1 < puntos_p2 THEN -(puntaje_meta - puntos_p1)
-                               ELSE 0
-                           END AS ef
-                    FROM partidas
+                participaciones AS (
+                    SELECT j1_cedula AS cedula, puntos_p1 AS propios, puntos_p2 AS rivales,
+                           puntaje_meta, infractor FROM partidas
                     UNION ALL
-                    SELECT torneo_id, j2_cedula,
-                           CASE
-                               WHEN motivo_penalizacion LIKE 'Tarjeta roja%'
-                                    AND j2_cedula <> COALESCE(infractor, '')
-                                   THEN puntaje_meta
-                               WHEN motivo_penalizacion LIKE 'Tarjeta roja%'
-                                    AND j2_cedula = COALESCE(infractor, '')
-                                   THEN -puntaje_meta
-                               WHEN puntos_p1 > puntos_p2 THEN puntaje_meta - puntos_p2
-                               WHEN puntos_p1 < puntos_p2 THEN -(puntaje_meta - puntos_p1)
-                               ELSE 0
-                           END
-                    FROM partidas
+                    SELECT j2_cedula, puntos_p1, puntos_p2, puntaje_meta, infractor FROM partidas
                     UNION ALL
-                    SELECT torneo_id, j3_cedula,
-                           CASE
-                               WHEN motivo_penalizacion LIKE 'Tarjeta roja%'
-                                    AND j3_cedula <> COALESCE(infractor, '')
-                                   THEN puntaje_meta
-                               WHEN motivo_penalizacion LIKE 'Tarjeta roja%'
-                                    AND j3_cedula = COALESCE(infractor, '')
-                                   THEN -puntaje_meta
-                               WHEN puntos_p2 > puntos_p1 THEN puntaje_meta - puntos_p1
-                               WHEN puntos_p2 < puntos_p1 THEN -(puntaje_meta - puntos_p2)
-                               ELSE 0
-                           END
-                    FROM partidas
+                    SELECT j3_cedula, puntos_p2, puntos_p1, puntaje_meta, infractor FROM partidas
                     UNION ALL
-                    SELECT torneo_id, j4_cedula,
-                           CASE
-                               WHEN motivo_penalizacion LIKE 'Tarjeta roja%'
-                                    AND j4_cedula <> COALESCE(infractor, '')
-                                   THEN puntaje_meta
-                               WHEN motivo_penalizacion LIKE 'Tarjeta roja%'
-                                    AND j4_cedula = COALESCE(infractor, '')
-                                   THEN -puntaje_meta
-                               WHEN puntos_p2 > puntos_p1 THEN puntaje_meta - puntos_p1
-                               WHEN puntos_p2 < puntos_p1 THEN -(puntaje_meta - puntos_p2)
-                               ELSE 0
-                           END
-                    FROM partidas
+                    SELECT j4_cedula, puntos_p2, puntos_p1, puntaje_meta, infractor FROM partidas
                 )
-                SELECT torneo_id, cedula, SUM(ef) AS ef
-                FROM efectividades
-                GROUP BY torneo_id, cedula
+                SELECT cedula,
+                       SUM(CASE
+                           WHEN infractor IS NOT NULL AND cedula <> infractor THEN puntaje_meta
+                           WHEN infractor IS NOT NULL THEN -puntaje_meta
+                           WHEN propios > rivales THEN puntaje_meta - rivales
+                           WHEN propios < rivales THEN -(puntaje_meta - propios)
+                           ELSE 0
+                       END) AS ef,
+                       SUM(CASE
+                           WHEN infractor IS NOT NULL AND cedula <> infractor THEN 1
+                           WHEN infractor IS NOT NULL THEN 0
+                           WHEN propios > rivales THEN 1
+                           ELSE 0
+                       END) AS pg,
+                       SUM(CASE
+                           WHEN infractor IS NOT NULL AND cedula <> infractor THEN 0
+                           WHEN infractor IS NOT NULL THEN 1
+                           WHEN propios < rivales OR (propios = 0 AND rivales = 0) THEN 1
+                           ELSE 0
+                       END) AS pp,
+                       SUM(CASE
+                           WHEN infractor IS NOT NULL AND cedula <> infractor THEN puntaje_meta
+                           WHEN infractor IS NOT NULL THEN 0
+                           ELSE propios
+                       END) AS pf
+                FROM participaciones
+                GROUP BY cedula
                 """,
+                (torneo_id,),
+            ).fetchall()
+            por_jugador = {fila["cedula"]: fila for fila in resultados}
+            # Torneos dañados por el antiguo error (motivo escrito a mano que empezaba por
+            # "Tarjeta roja"): ahí también se corrigen PG, PP y PF, no solo la EF.
+            afectado = conexion.execute(
+                """
+                SELECT 1
+                FROM mesas m
+                JOIN rondas r ON r.id = m.ronda_id
+                WHERE r.torneo_id = ? AND m.estado = 'finalizada'
+                  AND m.motivo_penalizacion LIKE 'Tarjeta roja%'
+                  AND NOT EXISTS (
+                      SELECT 1 FROM penalizaciones p
+                      WHERE p.mesa_id = m.id AND p.tipo = 'tarjeta_roja'
+                  )
+                LIMIT 1
+                """,
+                (torneo_id,),
+            ).fetchone() is not None
+            descansos = {
+                fila["cedula"]: fila["total"]
+                for fila in conexion.execute(
+                    """
+                    SELECT b.cedula, COUNT(*) AS total
+                    FROM byes b JOIN rondas r ON r.id = b.ronda_id
+                    WHERE r.torneo_id = ?
+                    GROUP BY b.cedula
+                    """,
                     (torneo_id,),
-                ).fetchall()
-            ef_por_jugador = {
-                fila["cedula"]: fila["ef"] for fila in resultados
+                )
             }
             if resultados:
                 for tabla in (
@@ -747,13 +798,28 @@ def _migrar_efectividad_clasificaciones_archivadas(torneo_id: int) -> None:
                         f"SELECT cedula FROM {tabla} WHERE torneo_id = ?",
                         (torneo_id,),
                     ).fetchall()
-                    conexion.executemany(
-                        f"UPDATE {tabla} SET ef = ? WHERE torneo_id = ? AND cedula = ?",
-                        [
-                            (ef_por_jugador.get(fila["cedula"], 0), torneo_id, fila["cedula"])
-                            for fila in filas
-                        ],
-                    )
+                    for fila in filas:
+                        datos = por_jugador.get(fila["cedula"])
+                        ef = datos["ef"] if datos else 0
+                        if afectado:
+                            conexion.execute(
+                                f"UPDATE {tabla} SET pg = ?, pp = ?, ef = ?, pf = ? "
+                                "WHERE torneo_id = ? AND cedula = ?",
+                                (
+                                    (datos["pg"] if datos else 0)
+                                    + descansos.get(fila["cedula"], 0),
+                                    datos["pp"] if datos else 0,
+                                    ef,
+                                    datos["pf"] if datos else 0,
+                                    torneo_id,
+                                    fila["cedula"],
+                                ),
+                            )
+                        else:
+                            conexion.execute(
+                                f"UPDATE {tabla} SET ef = ? WHERE torneo_id = ? AND cedula = ?",
+                                (ef, torneo_id, fila["cedula"]),
+                            )
 
                 for tabla in (
                     "torneo_ranking_archivado",
@@ -1473,13 +1539,61 @@ def listar_detalle_penalizaciones_torneo(torneo_id: int) -> list[sqlite3.Row]:
         conexion.close()
 
 
-def registrar_penalizacion(
+def _mesa_tiene_roja(conexion: sqlite3.Connection, mesa_id: int) -> bool:
+    """True si la mesa se cerró por una tarjeta roja registrada en ``penalizaciones``.
+
+    Se consulta la tabla (no el texto del motivo, que el usuario puede escribir).
+    """
+    return conexion.execute(
+        "SELECT 1 FROM penalizaciones WHERE mesa_id = ? AND tipo = 'tarjeta_roja' LIMIT 1",
+        (mesa_id,),
+    ).fetchone() is not None
+
+
+def _cerrar_ronda_si_corresponde(conexion: sqlite3.Connection, mesa_id: int) -> int | None:
+    """Cierra la ronda de la mesa si ya no quedan mesas sin resultado.
+
+    Si era la última ronda del torneo (y no es una edición histórica) también
+    finaliza el torneo. Devuelve el id del torneo finalizado, o ``None``. Quien
+    la llame debe guardar las clasificaciones archivadas tras confirmar la
+    transacción. Lo comparten el marcador, el forfeit y la tarjeta roja.
+    """
+    ronda = conexion.execute(
+        """
+        SELECT r.id, r.torneo_id, r.numero_ronda, t.num_rondas, t.edicion_historico
+        FROM rondas r
+        JOIN torneos t ON t.id = r.torneo_id
+        JOIN mesas m ON m.ronda_id = r.id
+        WHERE m.id = ?
+        """,
+        (mesa_id,),
+    ).fetchone()
+    if ronda is None:
+        return None
+    pendientes = conexion.execute(
+        "SELECT COUNT(*) AS total FROM mesas WHERE ronda_id = ? AND estado != 'finalizada'",
+        (ronda["id"],),
+    ).fetchone()["total"]
+    if pendientes:
+        return None
+    conexion.execute("UPDATE rondas SET estado = 'finalizada' WHERE id = ?", (ronda["id"],))
+    if ronda["numero_ronda"] >= ronda["num_rondas"] and not ronda["edicion_historico"]:
+        conexion.execute(
+            "UPDATE torneos SET estado = 'finalizado', fecha_finalizacion = ? WHERE id = ?",
+            (datetime.now().strftime("%Y-%m-%d %H:%M:%S"), ronda["torneo_id"]),
+        )
+        return ronda["torneo_id"]
+    return None
+
+
+def _registrar_penalizacion(
     torneo_id: int,
     cedula: str,
     motivo: str | None = None,
     roja_directa: bool = False,
-) -> str:
-    """Registra una falta y expulsa al jugador en la tercera o ante roja directa."""
+) -> tuple[str, int | None]:
+    """Núcleo de ``registrar_penalizacion``: devuelve (mensaje, torneo finalizado o None)."""
+    torneo_finalizado_id = None
     conexion = obtener_conexion()
     try:
         with conexion:
@@ -1526,6 +1640,7 @@ def registrar_penalizacion(
                     JOIN rondas r ON r.id = m.ronda_id
                     JOIN torneos t ON t.id = r.torneo_id
                     WHERE r.torneo_id = ? AND r.estado = 'en_curso'
+                      AND m.estado != 'finalizada'
                       AND (
                           m.j1_cedula = ? OR m.j2_cedula = ?
                           OR m.j3_cedula = ? OR m.j4_cedula = ?
@@ -1536,15 +1651,41 @@ def registrar_penalizacion(
                     (torneo_id, cedula, cedula, cedula, cedula),
                 ).fetchone()
                 if mesa is None:
+                    # Sin mesa abierta: o está descansando (BYE) o su mesa de esta ronda
+                    # ya tiene marcador. En ambos casos la roja queda pendiente y NO se
+                    # toca ningún resultado ya registrado.
+                    mesa_cerrada = conexion.execute(
+                        """
+                        SELECT 1
+                        FROM mesas m
+                        JOIN rondas r ON r.id = m.ronda_id
+                        WHERE r.torneo_id = ? AND r.estado = 'en_curso'
+                          AND m.estado = 'finalizada'
+                          AND (
+                              m.j1_cedula = ? OR m.j2_cedula = ?
+                              OR m.j3_cedula = ? OR m.j4_cedula = ?
+                          )
+                        LIMIT 1
+                        """,
+                        (torneo_id, cedula, cedula, cedula, cedula),
+                    ).fetchone()
                     registrar_historial_jugador(
                         cedula,
                         "TARJETA ROJA PENDIENTE",
                         "La expulsión se aplicará en la siguiente mesa donde sea emparejado.",
                         conexion=conexion,
                     )
+                    if mesa_cerrada is not None:
+                        return (
+                            "Tarjeta roja registrada como pendiente. La mesa actual del "
+                            "jugador ya tiene marcador y se conserva; la expulsión se "
+                            "aplicará en la siguiente mesa donde sea emparejado.",
+                            None,
+                        )
                     return (
                         "Tarjeta roja registrada como pendiente. "
-                        "Se aplicará automáticamente en la siguiente mesa."
+                        "Se aplicará automáticamente en la siguiente mesa.",
+                        None,
                     )
 
                 infractor_en_pareja_1 = cedula in (
@@ -1571,22 +1712,7 @@ def registrar_penalizacion(
                         mesa["id"],
                     ),
                 )
-                conexion.execute(
-                    """
-                    UPDATE rondas
-                    SET estado = CASE
-                        WHEN NOT EXISTS (
-                            SELECT 1 FROM mesas
-                            WHERE ronda_id = rondas.id AND estado != 'finalizada'
-                        ) THEN 'finalizada'
-                        ELSE estado
-                    END
-                    WHERE id = (
-                        SELECT ronda_id FROM mesas WHERE id = ?
-                    )
-                    """,
-                    (mesa["id"],),
-                )
+                torneo_finalizado_id = _cerrar_ronda_si_corresponde(conexion, mesa["id"])
                 conexion.execute(
                     """
                     INSERT INTO auditoria_resultados (
@@ -1637,7 +1763,10 @@ def registrar_penalizacion(
                     f"{'roja directa' if roja_directa else 'tercera penalización'}",
                     conexion=conexion,
                 )
-                return "Tarjeta roja. El jugador fue retirado y no puede volver a ingresar."
+                return (
+                    "Tarjeta roja. El jugador fue retirado y no puede volver a ingresar.",
+                    torneo_finalizado_id,
+                )
 
             registrar_historial_jugador(
                 cedula,
@@ -1646,9 +1775,30 @@ def registrar_penalizacion(
                 + (f": {motivo}" if motivo else ""),
                 conexion=conexion,
             )
-            return f"Tarjeta amarilla registrada. Faltas acumuladas: {numero_falta}/3."
+            return f"Tarjeta amarilla registrada. Faltas acumuladas: {numero_falta}/3.", None
     finally:
         conexion.close()
+
+
+def registrar_penalizacion(
+    torneo_id: int,
+    cedula: str,
+    motivo: str | None = None,
+    roja_directa: bool = False,
+) -> str:
+    """Registra una falta y expulsa al jugador en la tercera o ante roja directa.
+
+    Una roja nunca modifica una mesa que ya tiene marcador: queda pendiente y se
+    aplica en la siguiente mesa. Si la roja cierra la última mesa de la última
+    ronda, el torneo se finaliza igual que con un marcador normal.
+    """
+    mensaje, torneo_finalizado_id = _registrar_penalizacion(
+        torneo_id, cedula, motivo, roja_directa
+    )
+    if torneo_finalizado_id is not None:
+        _guardar_clasificaciones_archivadas(torneo_finalizado_id)
+        mensaje += " Era la última mesa de la última ronda: el torneo quedó finalizado."
+    return mensaje
 
 
 def _aplicar_penalizaciones_pendientes(
@@ -1948,9 +2098,7 @@ def obtener_historial_rondas_jugador(torneo_id: int, cedula: str) -> list[dict]:
         puntos_rivales = mesa["puntos_p2"] if es_pareja_1 else mesa["puntos_p1"]
         resultado = "Pendiente"
         if mesa["estado_mesa"] == "finalizada":
-            es_roja = (
-                str(mesa["motivo_penalizacion"] or "").startswith("Tarjeta roja")
-            )
+            es_roja = mesa["infractor_cedula"] is not None
             if es_roja and cedula != mesa["infractor_cedula"]:
                 resultado = "Victoria"
                 puntos = mesa["puntaje_meta"]
@@ -2057,12 +2205,7 @@ def obtener_ranking_torneo(
                 j.nombre,
                 COALESCE(SUM(
                     CASE 
-                        WHEN m.motivo_penalizacion LIKE 'Tarjeta roja%'
-                             AND j.cedula <> COALESCE((
-                                 SELECT p.cedula FROM penalizaciones p
-                                 WHERE p.mesa_id = m.id AND p.tipo = 'tarjeta_roja'
-                                 ORDER BY p.id DESC LIMIT 1
-                             ), '') AND m.estado = 'finalizada' THEN 1
+                        WHEN rj.infractor IS NOT NULL AND j.cedula <> rj.infractor AND m.estado = 'finalizada' THEN 1
                         WHEN (m.j1_cedula = j.cedula OR m.j2_cedula = j.cedula) AND m.puntos_p1 > m.puntos_p2 AND m.estado = 'finalizada' THEN 1
                         WHEN (m.j3_cedula = j.cedula OR m.j4_cedula = j.cedula) AND m.puntos_p2 > m.puntos_p1 AND m.estado = 'finalizada' THEN 1
                         ELSE 0 
@@ -2074,36 +2217,16 @@ def obtener_ranking_torneo(
                     ) AS pg,
                 COALESCE(SUM(
                     CASE 
-                        WHEN m.motivo_penalizacion LIKE 'Tarjeta roja%'
-                             AND j.cedula <> COALESCE((
-                                 SELECT p.cedula FROM penalizaciones p
-                                 WHERE p.mesa_id = m.id AND p.tipo = 'tarjeta_roja'
-                                 ORDER BY p.id DESC LIMIT 1
-                             ), '') AND m.estado = 'finalizada' THEN 0
-                        WHEN m.motivo_penalizacion LIKE 'Tarjeta roja%'
-                             AND j.cedula = COALESCE((
-                                 SELECT p.cedula FROM penalizaciones p
-                                 WHERE p.mesa_id = m.id AND p.tipo = 'tarjeta_roja'
-                                 ORDER BY p.id DESC LIMIT 1
-                             ), '') AND m.estado = 'finalizada' THEN 1
+                        WHEN rj.infractor IS NOT NULL AND j.cedula <> rj.infractor AND m.estado = 'finalizada' THEN 0
+                        WHEN rj.infractor IS NOT NULL AND j.cedula = rj.infractor AND m.estado = 'finalizada' THEN 1
                         WHEN (m.j1_cedula = j.cedula OR m.j2_cedula = j.cedula) AND m.estado = 'finalizada' AND (m.puntos_p1 < m.puntos_p2 OR (m.puntos_p1 = 0 AND m.puntos_p2 = 0)) THEN 1
                         WHEN (m.j3_cedula = j.cedula OR m.j4_cedula = j.cedula) AND m.estado = 'finalizada' AND (m.puntos_p2 < m.puntos_p1 OR (m.puntos_p1 = 0 AND m.puntos_p2 = 0)) THEN 1
                         ELSE 0 
                     END), 0) AS pp,
                 COALESCE(SUM(
                     CASE 
-                        WHEN m.motivo_penalizacion LIKE 'Tarjeta roja%'
-                             AND j.cedula <> COALESCE((
-                                 SELECT p.cedula FROM penalizaciones p
-                                 WHERE p.mesa_id = m.id AND p.tipo = 'tarjeta_roja'
-                                 ORDER BY p.id DESC LIMIT 1
-                             ), '') AND m.estado = 'finalizada' THEN t.puntaje_meta
-                        WHEN m.motivo_penalizacion LIKE 'Tarjeta roja%'
-                             AND j.cedula = COALESCE((
-                                 SELECT p.cedula FROM penalizaciones p
-                                 WHERE p.mesa_id = m.id AND p.tipo = 'tarjeta_roja'
-                                 ORDER BY p.id DESC LIMIT 1
-                             ), '') AND m.estado = 'finalizada' THEN -t.puntaje_meta
+                        WHEN rj.infractor IS NOT NULL AND j.cedula <> rj.infractor AND m.estado = 'finalizada' THEN t.puntaje_meta
+                        WHEN rj.infractor IS NOT NULL AND j.cedula = rj.infractor AND m.estado = 'finalizada' THEN -t.puntaje_meta
                         WHEN (m.j1_cedula = j.cedula OR m.j2_cedula = j.cedula)
                              AND m.estado = 'finalizada' AND m.puntos_p1 > m.puntos_p2
                             THEN (t.puntaje_meta - m.puntos_p2)
@@ -2120,18 +2243,8 @@ def obtener_ranking_torneo(
                     END), 0) AS ef,
                 COALESCE(SUM(
                     CASE 
-                        WHEN m.motivo_penalizacion LIKE 'Tarjeta roja%'
-                             AND j.cedula <> COALESCE((
-                                 SELECT p.cedula FROM penalizaciones p
-                                 WHERE p.mesa_id = m.id AND p.tipo = 'tarjeta_roja'
-                                 ORDER BY p.id DESC LIMIT 1
-                             ), '') AND m.estado = 'finalizada' THEN t.puntaje_meta
-                        WHEN m.motivo_penalizacion LIKE 'Tarjeta roja%'
-                             AND j.cedula = COALESCE((
-                                 SELECT p.cedula FROM penalizaciones p
-                                 WHERE p.mesa_id = m.id AND p.tipo = 'tarjeta_roja'
-                                 ORDER BY p.id DESC LIMIT 1
-                             ), '') AND m.estado = 'finalizada' THEN 0
+                        WHEN rj.infractor IS NOT NULL AND j.cedula <> rj.infractor AND m.estado = 'finalizada' THEN t.puntaje_meta
+                        WHEN rj.infractor IS NOT NULL AND j.cedula = rj.infractor AND m.estado = 'finalizada' THEN 0
                         WHEN (m.j1_cedula = j.cedula OR m.j2_cedula = j.cedula) AND m.estado = 'finalizada' THEN m.puntos_p1
                         WHEN (m.j3_cedula = j.cedula OR m.j4_cedula = j.cedula) AND m.estado = 'finalizada' THEN m.puntos_p2
                         ELSE 0 
@@ -2144,6 +2257,15 @@ def obtener_ranking_torneo(
                     SELECT 1 FROM rondas r
                     WHERE r.id = m.ronda_id AND r.torneo_id = tj.torneo_id
                 )
+            LEFT JOIN (
+                SELECT p.mesa_id, p.cedula AS infractor
+                FROM penalizaciones p
+                WHERE p.tipo = 'tarjeta_roja' AND p.mesa_id IS NOT NULL
+                  AND p.id = (
+                      SELECT MAX(p2.id) FROM penalizaciones p2
+                      WHERE p2.mesa_id = p.mesa_id AND p2.tipo = 'tarjeta_roja'
+                  )
+            ) rj ON rj.mesa_id = m.id
             WHERE tj.torneo_id = ?{filtro_sexo}{filtro_club}
             GROUP BY j.cedula
             ORDER BY pg DESC, ef DESC, pf DESC, j.nombre ASC
@@ -2647,6 +2769,11 @@ def registrar_o_editar_resultado_mesa(
             ).fetchone()
             if mesa is None:
                 raise ErrorDatos(f"No existe una mesa con ID {mesa_id}.")
+            if _mesa_tiene_roja(conexion, mesa_id):
+                raise ErrorDatos(
+                    "Esta mesa se cerró por tarjeta roja: su resultado lo fija el "
+                    "reglamento (pareja contraria gana con la meta contra 0) y no se puede editar."
+                )
             if puntos_final_p1 >= mesa["puntaje_meta"] and puntos_final_p2 >= mesa["puntaje_meta"]:
                 raise ErrorDatos(
                     "Una mesa no puede finalizar con ambas parejas alcanzando "
@@ -2668,37 +2795,7 @@ def registrar_o_editar_resultado_mesa(
             )
             if cursor.rowcount == 0:
                 raise ErrorDatos(f"No existe una mesa con ID {mesa_id}.")
-            ronda = conexion.execute(
-                """
-                SELECT r.id, r.torneo_id, r.numero_ronda, t.num_rondas,
-                       t.edicion_historico
-                FROM rondas r
-                JOIN torneos t ON t.id = r.torneo_id
-                JOIN mesas m ON m.ronda_id = r.id
-                WHERE m.id = ?
-                """,
-                (mesa_id,),
-            ).fetchone()
-            if ronda is not None:
-                pendientes = conexion.execute(
-                    "SELECT COUNT(*) AS total FROM mesas WHERE ronda_id = ? AND estado != 'finalizada'",
-                    (ronda["id"],),
-                ).fetchone()["total"]
-                if pendientes == 0:
-                    conexion.execute(
-                        "UPDATE rondas SET estado = 'finalizada' WHERE id = ?",
-                        (ronda["id"],),
-                    )
-                    if ronda["numero_ronda"] >= ronda["num_rondas"] and not ronda["edicion_historico"]:
-                        conexion.execute(
-                            """
-                            UPDATE torneos
-                            SET estado = 'finalizado', fecha_finalizacion = ?
-                            WHERE id = ?
-                            """,
-                            (datetime.now().strftime("%Y-%m-%d %H:%M:%S"), ronda["torneo_id"]),
-                        )
-                        torneo_finalizado_id = ronda["torneo_id"]
+            torneo_finalizado_id = _cerrar_ronda_si_corresponde(conexion, mesa_id)
             conexion.execute(
                 """
                 INSERT INTO auditoria_resultados (
@@ -3001,9 +3098,10 @@ def registrar_forfeit_mesa(
                 else "Forfeit pareja 2" if pareja_ganadora == 2
                 else "Doble forfeit"
             )
-            motivo_existente = str(mesa["motivo_penalizacion"] or "")
-            if motivo_existente.startswith("Tarjeta roja"):
-                motivo_forfeit = f"{motivo_existente}; {motivo_forfeit}"
+            if _mesa_tiene_roja(conexion, mesa_id):
+                raise ErrorDatos(
+                    "Esta mesa se cerró por tarjeta roja y no admite un forfeit adicional."
+                )
             conexion.execute(
                 """
                 UPDATE mesas
@@ -3039,28 +3137,7 @@ def registrar_forfeit_mesa(
                         f"Retirado del torneo ID {torneo_id} por sanción/forfeit",
                         conexion=conexion,
                     )
-            pendientes = conexion.execute(
-                "SELECT COUNT(*) FROM mesas WHERE ronda_id = ? AND estado != 'finalizada'",
-                (mesa["ronda_id"],),
-            ).fetchone()[0]
-            if pendientes == 0:
-                conexion.execute(
-                    "UPDATE rondas SET estado = 'finalizada' WHERE id = ?",
-                    (mesa["ronda_id"],),
-                )
-                if (
-                    mesa["numero_ronda"] >= mesa["num_rondas"]
-                    and not mesa["edicion_historico"]
-                ):
-                    conexion.execute(
-                        """
-                        UPDATE torneos
-                        SET estado = 'finalizado', fecha_finalizacion = ?
-                        WHERE id = ?
-                        """,
-                        (datetime.now().strftime("%Y-%m-%d %H:%M:%S"), torneo_id),
-                    )
-                    torneo_finalizado_id = torneo_id
+            torneo_finalizado_id = _cerrar_ronda_si_corresponde(conexion, mesa_id)
     finally:
         conexion.close()
     if torneo_finalizado_id is not None:
