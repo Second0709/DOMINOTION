@@ -13,6 +13,7 @@ from pathlib import Path
 import random
 import re
 import sqlite3
+import subprocess
 import sys
 import time
 import tkinter as tk
@@ -35,13 +36,10 @@ from hoja_mesa import (
     DESPLAZ_NUMERO,
     DESPLAZ_VALOR_ESTADISTICA,
     DISTANCIA_TITULO_PAREJA,
-    FUENTE_BOLD,
-    FUENTE_NORMAL,
     MARGEN as MARGEN_HOJA,
     TAMANO_PAGINA,
     JugadorHoja,
     MesaHoja,
-    ajustar_texto,
     como_jugador_hoja,
     distancia_superior_tarjeta,
     estadisticas_jugador,
@@ -79,15 +77,44 @@ def _centrar_ventana_en_pantalla(
     ventana.geometry(f"{ancho}x{alto}+{x}+{y}")
 
 
+def _icono_marcador_de_respaldo(estado: str) -> Image.Image:
+    """Ícono dibujado en memoria (círculo con ✓ o ✕) para cuando falta el PNG del paquete."""
+    tamano = 80
+    imagen = Image.new("RGBA", (tamano, tamano), (0, 0, 0, 0))
+    lapiz = ImageDraw.Draw(imagen)
+    if estado == "finalizado":
+        lapiz.ellipse((4, 4, tamano - 4, tamano - 4), fill="#7ED321")
+        lapiz.line((22, 42, 36, 56, 60, 26), fill="white", width=9, joint="curve")
+    else:
+        lapiz.ellipse((4, 4, tamano - 4, tamano - 4), fill="#4A4A4A")
+        lapiz.line((26, 26, 54, 54), fill="#DDDDDD", width=8)
+        lapiz.line((54, 26, 26, 54), fill="#DDDDDD", width=8)
+    return imagen
+
+
 def _cargar_iconos_marcador(master: tk.Misc) -> dict[str, ImageTk.PhotoImage]:
     iconos = {}
     for estado, ruta in _RUTAS_ICONOS_MARCADOR.items():
-        with Image.open(ruta) as imagen:
-            imagen_redimensionada = imagen.convert("RGBA").resize(
-                (20, 20), Image.Resampling.LANCZOS
-            )
+        try:
+            with Image.open(ruta) as imagen:
+                base = imagen.convert("RGBA")
+        except OSError:
+            base = _icono_marcador_de_respaldo(estado)
+        imagen_redimensionada = base.resize((20, 20), Image.Resampling.LANCZOS)
         iconos[estado] = ImageTk.PhotoImage(imagen_redimensionada, master=master)
     return iconos
+
+
+def _abrir_con_programa_predeterminado(ruta) -> None:
+    """Abre un archivo con la aplicación predeterminada del sistema operativo."""
+    if hasattr(os, "startfile"):
+        os.startfile(str(ruta))
+        return
+    comando = ["open" if sys.platform == "darwin" else "xdg-open", str(ruta)]
+    try:
+        subprocess.run(comando, check=True)
+    except subprocess.CalledProcessError as error:
+        raise OSError(str(error)) from error
 
 
 # Configuración inicial del tema
@@ -451,7 +478,7 @@ AYUDAS_ETIQUETAS: dict[str, str] = {
         "Anterior mesa": "Vuelve a la mesa anterior de la lista sin cerrar la ventana.",
         "Descuento por infracción": "Puntos que se restan a una pareja por una infracción. Se puede escribir -30 o 30.",
         "Motivo del descuento": "Explica por qué se aplica el descuento (opcional).",
-        "Resultado del marcador con el descuento": "Marcador final después de restar los descuentos. Nunca baja de 0.",
+        "Resultado del marcador con el descuento": "Marcador final después de restar los descuentos. Puede quedar en negativo si el descuento supera los puntos.",
         "Mesas marcadas": "Mesas de la ronda. Las marcadas ya tienen resultado; haz clic en una para cargarla.",
         # Formularios de torneo
         "Duración (minutos)": "Tiempo disponible para jugar cada ronda.",
@@ -470,15 +497,15 @@ AYUDAS_ENCABEZADOS: dict[str, str] = {
         "Pos": "Posición en la clasificación. Se ordena por PG, luego EF y luego PF.",
         "PG": "Partidas ganadas.",
         "PP": "Partidas perdidas.",
-        "EF": "Efectividad: por partido, objetivo de puntos menos los puntos del perdedor. El ganador suma esa diferencia y el perdedor la recibe en negativo. La tarjeta roja suma o resta el puntaje meta.",
-        "EF (Dif)": "Efectividad: por partido, objetivo de puntos menos los puntos del perdedor. El ganador suma esa diferencia y el perdedor la recibe en negativo. La tarjeta roja suma o resta el puntaje meta.",
+        "EF": "Efectividad: por partido, la meta menos los puntos de la pareja perdedora. El ganador suma esa cantidad y el perdedor la recibe en negativo. Con tarjeta roja, los demás jugadores de la mesa suman la meta completa.",
+        "EF (Dif)": "Efectividad: por partido, la meta menos los puntos de la pareja perdedora. El ganador suma esa cantidad y el perdedor la recibe en negativo. Con tarjeta roja, los demás jugadores de la mesa suman la meta completa.",
         "PF": "Puntos a favor: total de puntos anotados.",
         "Pareja 1": "Los dos jugadores de la pareja 1 (asientos 1 y 2).",
         "Pareja 2": "Los dos jugadores de la pareja 2 (asientos 3 y 4).",
         "Pareja 1 (J1 / J2)": "Jugadores 1 y 2 de la mesa (primera pareja).",
         "Pareja 2 (J3 / J4)": "Jugadores 3 y 4 de la mesa (segunda pareja).",
         "Pareja 1 / BYE": "Si aparece BYE, ese jugador descansa en la ronda y no juega mesa.",
-        "Marcador": "Puntos de cada pareja. Aparece un identificativo si la mesa aún no tiene resultado.",
+        "Marcador": "Puntos de cada pareja. Aparece un guion (—) si la mesa aún no tiene resultado.",
         "Marcador final": "Resultado de la mesa después de aplicar los descuentos.",
         "Puntos base": "Puntos anotados antes de aplicar los descuentos.",
         "Descuentos": "Puntos restados por infracciones.",
@@ -2162,7 +2189,7 @@ class VentanaRankingClub(VentanaModal):
         self.tabla = ttk.Treeview(tabla_frame, columns=columnas, show="headings")
         encabezados = {
             "pos": "Pos", "cedula": "Cédula", "nombre": "Nombre",
-            "pg": "PG", "pp": "PP", "ef": "EF (Dif)", "pf": "PF",
+            "pg": "PG", "pp": "PP", "ef": "EF", "pf": "PF",
         }
         for columna, texto in encabezados.items():
             self.tabla.heading(columna, text=texto)
@@ -3480,7 +3507,7 @@ class VentanaRegistrarMesa(VentanaModal):
             d2 = self._leer_entero(self.ent_descuento_p2.get(), descuento=True)
             if min(p1, p2, d1, d2) < 0:
                 raise ValueError
-            texto = f"{max(0, p1 - d1)} vs {max(0, p2 - d2)}"
+            texto = f"{p1 - d1} vs {p2 - d2}"
         except ValueError:
             texto = "– vs –"
         self.lbl_resultado.configure(text=texto)
@@ -3506,8 +3533,15 @@ class VentanaRegistrarMesa(VentanaModal):
             descuento_p2 = self._leer_entero(self.ent_descuento_p2.get(), descuento=True)
             if min(p1, p2, descuento_p1, descuento_p2) < 0:
                 raise ValueError
-            p1_final = max(0, p1 - descuento_p1)
-            p2_final = max(0, p2 - descuento_p2)
+            p1_final = p1 - descuento_p1
+            p2_final = p2 - descuento_p2
+            if max(p1, p2) > self.pts_meta + 100 and not messagebox.askyesno(
+                "Confirmar marcador",
+                f"Un marcador de {max(p1, p2)} puntos supera en más de 100 la meta de "
+                f"{self.pts_meta}.\n\n¿Es correcto?",
+                parent=self,
+            ):
+                return
             torneo_antes = (
                 repo.obtener_torneo(self.torneo_id)
                 if self.torneo_id is not None
@@ -3902,7 +3936,7 @@ class VentanaHojaMesa(VentanaModal):
             return
 
         try:
-            os.startfile(str(archivo))
+            _abrir_con_programa_predeterminado(archivo)
         except OSError as error:
             messagebox.showerror(
                 "No se pudo abrir el PDF",
@@ -4880,7 +4914,7 @@ class VistaClubes(ctk.CTkFrame):
         btns_club_frame = ctk.CTkFrame(right_frame, fg_color="transparent")
         btns_club_frame.grid(row=3, column=0, sticky="e", padx=10, pady=6)
 
-        btn_edit_club = BotonDegradado(btns_club_frame, text="✏️\u2002Editar club", fg_color="#D32F2F", hover_color="##9A0007", width=150, height=32, command=self.editar_club)
+        btn_edit_club = BotonDegradado(btns_club_frame, text="✏️\u2002Editar club", fg_color="#D32F2F", hover_color="#9A0007", width=150, height=32, command=self.editar_club)
         btn_edit_club.pack(side="left", padx=(0, 10))
 
         btn_del_club = BotonDegradado(btns_club_frame, text="🗑\u2002Eliminar club seleccionado", fg_color="#D32F2F", hover_color="#9A0007", width=210, height=32, command=self.eliminar_club)
@@ -7139,7 +7173,7 @@ class VistaEjecucionTorneo(ctk.CTkFrame):
         self.tabla_ranking.heading("nombre", text="Nombre completo")
         self.tabla_ranking.heading("pg", text="PG")
         self.tabla_ranking.heading("pp", text="PP")
-        self.tabla_ranking.heading("ef", text="EF (Dif)")
+        self.tabla_ranking.heading("ef", text="EF")
         self.tabla_ranking.heading("pf", text="PF")
 
         self.tabla_ranking.column("pos", width=50, anchor="center")
@@ -7758,9 +7792,20 @@ class VistaEjecucionTorneo(ctk.CTkFrame):
         if not primera_confirmacion:
             return
 
+        aviso_rojas = ""
+        expulsados = repo.rojas_aplicadas_en_ultima_ronda(torneo_id)
+        if expulsados:
+            aviso_rojas = (
+                "\n\nAtención: " + ", ".join(expulsados) + " fue expulsado con tarjeta roja en "
+                "esta ronda. Eliminar la ronda NO revierte esa expulsión."
+                if len(expulsados) == 1
+                else "\n\nAtención: " + ", ".join(expulsados) + " fueron expulsados con tarjeta "
+                "roja en esta ronda. Eliminar la ronda NO revierte esas expulsiones."
+            )
         segunda_confirmacion = messagebox.askyesno(
             "Confirmación 2/2",
-            "Esta acción eliminará sus mesas, resultados y byes sin posibilidad de deshacer. ¿Continuar?",
+            "Esta acción eliminará sus mesas, resultados y byes sin posibilidad de deshacer."
+            f"{aviso_rojas}\n\n¿Continuar?",
             parent=self,
         )
         if not segunda_confirmacion:

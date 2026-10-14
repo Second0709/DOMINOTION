@@ -10,10 +10,23 @@ que los cambios posteriores de nombres o clubes no alteren el resultado archivad
 """
 from __future__ import annotations
 
+import logging
 import sqlite3
 from datetime import datetime
+from pathlib import Path
 
+import db as _db
 from db import obtener_conexion
+
+logger = logging.getLogger("dominotion")
+
+# Una mano no puede sumar más que todas las fichas del juego: 270 puntos con dobles
+# nueve (168 con dobles seis). Un marcador por encima de la meta + este margen es un
+# error de captura y se rechaza.
+EXCESO_MAXIMO_SOBRE_META = 270
+# Cuántas copias de seguridad previas a una migración se conservan.
+CANTIDAD_RESPALDOS_MIGRACION = 5
+_respaldo_migracion_intentado = False
 
 
 class ErrorDatos(Exception):
@@ -694,9 +707,53 @@ def _asegurar_clasificaciones_archivadas(torneo_id: int) -> None:
     _migrar_efectividad_clasificaciones_archivadas(torneo_id)
 
 
+def _respaldar_bd_antes_de_migrar() -> Path | None:
+    """Copia la base de datos a ``respaldos/`` antes de reescribir datos archivados.
+
+    Se hace una sola vez por ejecución de la aplicación. Si no se puede copiar,
+    se registra el aviso y la migración continúa (no debe impedir abrir el programa).
+    """
+    global _respaldo_migracion_intentado
+    if _respaldo_migracion_intentado:
+        return None
+    _respaldo_migracion_intentado = True
+    try:
+        ruta = Path(_db.RUTA_BD)
+        carpeta = ruta.parent / "respaldos"
+        carpeta.mkdir(exist_ok=True)
+        destino = carpeta / f"{ruta.stem}_antes_de_migrar_{datetime.now():%Y%m%d_%H%M%S}.db"
+        origen = obtener_conexion()
+        copia = sqlite3.connect(destino)
+        try:
+            origen.backup(copia)
+        finally:
+            copia.close()
+            origen.close()
+        antiguos = sorted(carpeta.glob(f"{ruta.stem}_antes_de_migrar_*.db"))
+        for viejo in antiguos[:-CANTIDAD_RESPALDOS_MIGRACION]:
+            viejo.unlink(missing_ok=True)
+        return destino
+    except (OSError, sqlite3.Error) as error:
+        logger.warning("No se pudo crear la copia de seguridad previa a la migración: %s", error)
+        return None
+
+
+def _migracion_aplicada(migracion: str) -> bool:
+    conexion = obtener_conexion()
+    try:
+        return conexion.execute(
+            "SELECT 1 FROM migraciones_datos WHERE id = ?", (migracion,)
+        ).fetchone() is not None
+    finally:
+        conexion.close()
+
+
 def _migrar_efectividad_clasificaciones_archivadas(torneo_id: int) -> None:
     """Actualiza una vez la EF del snapshot de un torneo archivado."""
     migracion = f"efectividad_objetivo_menos_puntos_perdedor_v2:{torneo_id}"
+    if _migracion_aplicada(migracion):
+        return
+    _respaldar_bd_antes_de_migrar()
     conexion = obtener_conexion()
     try:
         with conexion:
@@ -1535,6 +1592,33 @@ def listar_detalle_penalizaciones_torneo(torneo_id: int) -> list[sqlite3.Row]:
             """,
             (torneo_id,),
         ).fetchall()
+    finally:
+        conexion.close()
+
+
+def rojas_aplicadas_en_ultima_ronda(torneo_id: int) -> list[str]:
+    """Nombres de los jugadores expulsados con tarjeta roja en la última ronda.
+
+    Eliminar la ronda no revierte esas expulsiones; la interfaz lo avisa con esta lista.
+    """
+    conexion = obtener_conexion()
+    try:
+        filas = conexion.execute(
+            """
+            SELECT DISTINCT j.nombre
+            FROM penalizaciones p
+            JOIN mesas m ON m.id = p.mesa_id
+            JOIN rondas r ON r.id = m.ronda_id
+            JOIN jugadores j ON j.cedula = p.cedula
+            WHERE r.torneo_id = ? AND p.tipo = 'tarjeta_roja' AND p.aplicada = 1
+              AND r.numero_ronda = (
+                  SELECT MAX(numero_ronda) FROM rondas WHERE torneo_id = ?
+              )
+            ORDER BY j.nombre COLLATE NOCASE
+            """,
+            (torneo_id, torneo_id),
+        ).fetchall()
+        return [fila["nombre"] for fila in filas]
     finally:
         conexion.close()
 
@@ -2751,8 +2835,10 @@ def registrar_o_editar_resultado_mesa(
     valores = (puntos_p1, puntos_p2, descuento_p1, descuento_p2)
     if any(not isinstance(valor, int) or valor < 0 for valor in valores):
         raise ErrorDatos("Los puntos y descuentos deben ser enteros no negativos.")
-    puntos_final_p1 = max(0, puntos_p1 - descuento_p1)
-    puntos_final_p2 = max(0, puntos_p2 - descuento_p2)
+    # El descuento puede dejar el puntaje final por debajo de cero: el reglamento lo
+    # anota como negativo, y la efectividad del rival lo refleja.
+    puntos_final_p1 = puntos_p1 - descuento_p1
+    puntos_final_p2 = puntos_p2 - descuento_p2
     torneo_finalizado_id = None
     conexion = obtener_conexion()
     try:
@@ -2773,6 +2859,21 @@ def registrar_o_editar_resultado_mesa(
                 raise ErrorDatos(
                     "Esta mesa se cerró por tarjeta roja: su resultado lo fija el "
                     "reglamento (pareja contraria gana con la meta contra 0) y no se puede editar."
+                )
+            limite_puntos = mesa["puntaje_meta"] + EXCESO_MAXIMO_SOBRE_META
+            if puntos_p1 > limite_puntos or puntos_p2 > limite_puntos:
+                raise ErrorDatos(
+                    f"Puntaje fuera de rango: con una meta de {mesa['puntaje_meta']} no puede "
+                    f"superar {limite_puntos} puntos. Revise que no haya un dígito de más."
+                )
+            if descuento_p1 > mesa["puntaje_meta"] or descuento_p2 > mesa["puntaje_meta"]:
+                raise ErrorDatos(
+                    f"Un descuento no puede superar la meta del torneo ({mesa['puntaje_meta']} puntos)."
+                )
+            if puntos_final_p1 == puntos_final_p2:
+                raise ErrorDatos(
+                    "Una partida no puede terminar empatada: el reglamento exige jugar manos "
+                    "adicionales hasta desempatar. Para un doble forfeit use «Declarar forfeit»."
                 )
             if puntos_final_p1 >= mesa["puntaje_meta"] and puntos_final_p2 >= mesa["puntaje_meta"]:
                 raise ErrorDatos(

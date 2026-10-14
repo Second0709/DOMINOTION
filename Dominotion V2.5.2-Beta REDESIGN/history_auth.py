@@ -163,8 +163,30 @@ def _registrar_intento(exitoso: bool) -> None:
         conexion.close()
 
 
+def _reiniciar_bloqueo_vencido() -> None:
+    """Si el bloqueo ya venció, el contador de intentos fallidos vuelve a cero.
+
+    Sin esto, un solo fallo tras el bloqueo (con el contador aún en 5 o más) lo
+    reactivaba otros 15 minutos.
+    """
+    conexion = db.obtener_conexion()
+    try:
+        with conexion:
+            conexion.execute(
+                """
+                UPDATE history_auth
+                SET failed_attempts = 0, locked_until = 0
+                WHERE id = 1 AND locked_until > 0 AND locked_until <= ?
+                """,
+                (time.time(),),
+            )
+    finally:
+        conexion.close()
+
+
 def verificar_credencial(credencial: str) -> str:
     """Returns 'ok', 'invalid', 'locked', or 'not_configured'."""
+    _reiniciar_bloqueo_vencido()
     conexion = db.obtener_conexion()
     try:
         fila = conexion.execute(
@@ -196,6 +218,7 @@ def verificar_respuestas(respuestas: dict[str, str]) -> str:
     if len(contestadas) < RESPUESTAS_MINIMAS_RECUPERACION:
         return "insufficient"
 
+    _reiniciar_bloqueo_vencido()
     conexion = db.obtener_conexion()
     try:
         credencial = conexion.execute(

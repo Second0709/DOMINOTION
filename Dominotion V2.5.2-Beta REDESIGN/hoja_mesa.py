@@ -29,22 +29,32 @@ ANCHO_A4, ALTO_A4 = min(A4), max(A4)
 TAMANO_PAGINA = (ANCHO_A4, ALTO_A4)
 MARGEN = 32
 
-# Estas fuentes son parte del diseño de las hojas; fallar explícitamente evita
-# generar PDFs con tipografía distinta cuando falte un recurso del paquete.
+# Estas fuentes son parte del diseño de las hojas. Si falta un recurso del paquete
+# NO se impide abrir la aplicación (solo la usan las hojas de mesa): la vista previa
+# mide con Helvetica y ``generar_pdf_hoja_mesa`` falla con un mensaje claro, para no
+# producir PDFs con una tipografía distinta sin que el usuario se entere.
 DIRECTORIO_FUENTES = DIRECTORIO_RECURSOS / "Fonts"
 RUTA_REGULAR = DIRECTORIO_FUENTES / "GlacialIndifference-Regular.ttf"
 RUTA_BOLD = DIRECTORIO_FUENTES / "GlacialIndifference-Bold.ttf"
 
-for ruta_fuente in (RUTA_REGULAR, RUTA_BOLD):
-    if not ruta_fuente.is_file():
-        raise FileNotFoundError(
-            f"No se encontró la fuente requerida para las hojas de mesa: {ruta_fuente}"
-        )
+FUENTES_DISPONIBLES = RUTA_REGULAR.is_file() and RUTA_BOLD.is_file()
+if FUENTES_DISPONIBLES:
+    FUENTE_NORMAL = "GlacialIndifference"
+    FUENTE_BOLD = "GlacialIndifference-Bold"
+    pdfmetrics.registerFont(TTFont(FUENTE_NORMAL, str(RUTA_REGULAR)))
+    pdfmetrics.registerFont(TTFont(FUENTE_BOLD, str(RUTA_BOLD)))
+else:
+    FUENTE_NORMAL = "Helvetica"
+    FUENTE_BOLD = "Helvetica-Bold"
 
-FUENTE_NORMAL = "GlacialIndifference"
-FUENTE_BOLD = "GlacialIndifference-Bold"
-pdfmetrics.registerFont(TTFont(FUENTE_NORMAL, str(RUTA_REGULAR)))
-pdfmetrics.registerFont(TTFont(FUENTE_BOLD, str(RUTA_BOLD)))
+
+def verificar_fuentes() -> None:
+    """Falla con un mensaje claro si falta alguna fuente requerida por el diseño."""
+    for ruta_fuente in (RUTA_REGULAR, RUTA_BOLD):
+        if not ruta_fuente.is_file():
+            raise FileNotFoundError(
+                f"No se encontró la fuente requerida para las hojas de mesa: {ruta_fuente}"
+            )
 
 
 # ---------------------------------------------------------------------------
@@ -57,8 +67,9 @@ class JugadorHoja:
 
     - ``numero``: número de jugador dentro del torneo (orden de ingreso).
     - ``ganadas`` / ``perdidas``: partidas ganadas y perdidas acumuladas.
-    - ``eficiencia``: suma del objetivo menos los puntos del perdedor por partida,
-      positiva para el ganador y negativa para el perdedor.
+    - ``eficiencia``: la efectividad del jugador, es decir la suma, por partida, de la
+      meta menos los puntos del perdedor; positiva para el ganador y negativa para el
+      perdedor.
 
     Cualquier valor en ``None`` se imprime como "-".
     """
@@ -98,7 +109,7 @@ def estadisticas_jugador(jugador: JugadorHoja) -> tuple[tuple[str, str], ...]:
     return (
         ("Ganadas", formatear_valor(jugador.ganadas)),
         ("Perdidas", formatear_valor(jugador.perdidas)),
-        ("Eficiencia", formatear_eficiencia(jugador.eficiencia)),
+        ("Efectividad", formatear_eficiencia(jugador.eficiencia)),
     )
 
 
@@ -262,6 +273,7 @@ def generar_pdf_hoja_mesa(
     ``JugadorHoja`` (también se aceptan nombres simples; sus estadísticas se
     imprimen como "-").
     """
+    verificar_fuentes()
     if not mesas:
         raise ValueError("Se requiere al menos una mesa para generar el PDF.")
 

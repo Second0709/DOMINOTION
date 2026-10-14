@@ -193,7 +193,10 @@ class VentanaPresentacion(tk.Tk):
 
     def __init__(self) -> None:
         super().__init__()
-        self.iconbitmap(str(_RUTA_ICONO_APP))
+        try:
+            self.iconbitmap(str(_RUTA_ICONO_APP))
+        except tk.TclError:
+            pass  # sin ícono (otro sistema o archivo ausente): la animación sigue igual
         self.withdraw()
         self.overrideredirect(True)
         self.configure(bg=self.FONDO_DER)
@@ -419,7 +422,6 @@ class VentanaPresentacion(tk.Tk):
         if t < 0:
             return
         t %= self.CARRUSEL_CICLO_MS
-        n = self.FICHAS_N
         for i, ficha in enumerate(self._fichas):
             # Entrada: llegan desde la derecha, las últimas viajan más lejos
             t_in = (t - i * 110) / 450
